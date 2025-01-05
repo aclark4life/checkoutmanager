@@ -154,13 +154,14 @@ def main():
     configfile = os.path.expanduser(options.configfile)
     if utils.VERBOSE:
         print("Using config file %s" % configfile)
-    if not os.path.exists(configfile):
-        print("Config file %s does not exist." % configfile)
-        sample = pkg_resources.resource_filename("checkoutmanager", "sample.cfg")
-        shutil.copy(sample, configfile)
-        print("Copied %s as a sample to %s" % (sample, configfile))
-        print("Open it and adjust it to what you need.")
-        return
+
+    # if not os.path.exists(configfile):
+    #     print("Config file %s does not exist." % configfile)
+    #     sample = pkg_resources.resource_filename("checkoutmanager", "sample.cfg")
+    #     shutil.copy(sample, configfile)
+    #     print("Copied %s as a sample to %s" % (sample, configfile))
+    #     print("Open it and adjust it to what you need.")
+    #     return
 
     if len(args) < 1:
         parser.print_help()
