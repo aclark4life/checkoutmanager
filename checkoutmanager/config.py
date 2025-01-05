@@ -73,7 +73,7 @@ class Config:
     """Wrapper around config file for returning DirInfo objects"""
 
     def __init__(self, config_filename):
-        assert os.path.exists(config_filename)  # Just for me atm...
+        # assert os.path.exists(config_filename)  # Just for me atm...
         self.config_filename = config_filename
         self.parser = configparser.ConfigParser(DEFAULTS)
         self.parser.read(config_filename)
